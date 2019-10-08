@@ -14,6 +14,8 @@ import lombok.Data;
 @Data
 public class AppConfig {
 	
+	private boolean enabled;
+	
 	// inject the yaml list into java list
 	private final List<String> allowedIp = new ArrayList<String>();
 

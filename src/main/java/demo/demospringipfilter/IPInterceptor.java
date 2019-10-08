@@ -25,6 +25,9 @@ public class IPInterceptor implements HandlerInterceptor {
 		
 		log.info("USER IP ADDRESS IS =>" + ipAddress);
 		
+		if(appConfig.isEnabled() == false)
+			return true;
+		
 		if (!StringUtils.isNotBlank(ipAddress))
 			return false;
 		
